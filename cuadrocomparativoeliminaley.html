@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El presidente Milei quiere eliminar las siguientes leyes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+               border-radius: 10px;
+  max-width: 800px;
+  margin: 20px auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .comparison-table {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        thead {
+            background-color: #2a5298;
+            color: white;
+        }
+        
+        th, td {
+     
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            font-weight: 600;
+        }
+        
+        tbody tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .ley-name {
+            font-weight: 600;
+            color: #2a5298;
+        }
+        
+        .ley-status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .eliminar {
+            background-color: #ffcccc;
+            color: #cc0000;
+        }
+        
+        .mantener {
+            background-color: #ccffcc;
+            color: #006600;
+        }
+        
+        .ley-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2a5298;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #ddd;
+        }
+        
+        @media (max-width: 768px) {
+            th, td {
+                font-size: 1.1rem;
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.1rem;
+                font-size: 2rem;
+            }
+            
+            .stats {
+                flex-direction: column;
+            }
+        }
+          .volver {
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 400%;
+    animation: colores 6s ease infinite;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  @keyframes colores {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .volver:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+  }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+          <button onclick="location.href='index.html'" class="volver">Volver atrás</button>
+            <h1>El presidente Milei quiere eliminar las siguientes leyes</h1>
+            <p class="subtitle">Análisis comparativo de las leyes propuestas para eliminación </p>
+            <p>
+         Según lo que anunció el presidente Milei, esta ley podría ser eliminada en 2025 o podría serlo si gana las elecciones presidenciales de diciembre de 2026
+            </p>
+            
+        </header>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">27</div>
+                <div class="stat-label">Leyes en análisis</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">27</div>
+                <div class="stat-label">Propuestas para eliminar</div>
+            </div>
+           
+        </div>
+        
+        <div class="comparison-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ley</th>
+                        <th>Descripción</th>
+                        <th>Estado propuesto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      
+                        <td class="ley-name">va ser eliminado  la  Ley de Educación en la Universidad Pública</td>
+                        <td class="ley-description">Regula el funcionamiento, financiamiento y acceso a la educación superior pública en Argentina.</td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                    </tr>
+                    <tr>
+                        <td class="ley-name">va ser eliminado la  Ley de Discapacidad</td>
+                        <td class="ley-description">Establece un sistema de protección integral para personas con discapacidad, garantizando su inclusión y derechos.</td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                    </tr>
+                    <tr>
+                        <td class="ley-name"> va ser eliminado  la Ley de los Hospitales</td>
+                        <td class="ley-description">Regula la organización y funcionamiento del sistema hospitalario público en el país.</td>
+                        <td><span class="ley-status eliminar"> El presidente milei lo va a eliminar esta ley</span></td>
+                    </tr>
+                    <tr>
+                        <td class="ley-name"> va ser eliminado la Ley Micaela</td>
+                        <td class="ley-description">Establece la capacitación obligatoria en género y violencia contra las mujeres para todas las personas que integran los tres poderes del Estado.</td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                    </tr>
+                    <tr>
+                        <td class="ley-name">va ser eliminado  la Ley contra el Abuso Sexual</td>
+                        <td class="ley-description">Proporciona medidas de protección, prevención y sanción contra el abuso sexual en todas sus formas.</td>
+                        <td><span class="ley-status eliminar"> El presidente milei lo va a eliminar esta ley</span></td>
+                    </tr>
+                    <tr>
+                        <td class="ley-name"> va ser eliminado la Ley contra la Violencia de Género</td>
+                        <td class="ley-description">Establece medidas integrales para prevenir, sancionar y erradicar la violencia contra las mujeres.</td>
+                        <td><span class="ley-status eliminar"> El presidente milei lo va a eliminar esta ley</span></td>
+                    </tr>
+                  
+
+
+  <tr>
+                        <td class="ley-name">va ser eliminado  la Ley de Integridad Sexual</td>
+                        <td class="ley-description">Garantiza los derechos de las personas en materia de integridad sexual y establece mecanismos de protección.</td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                    </tr>
+
+
+
+
+
+
+
+                    
+                      <tr>
+                        <td class="ley-name"> va ser eliminado la Ley 26.485 , Ley de Protección Integral para Prevenir, Sancionar y Erradicar la Violencia contra las Mujeres. </td>
+                        <td class="ley-description">Es una norma argentina que tiene como objetivo proteger a las mujeres frente a cualquier forma de violencia. Busca que puedan vivir seguras y con respeto, sin sufrir maltrato físico, psicológico, económico ni simbólico. Además, obliga al Estado a prevenir, castigar a los agresores y brindar ayuda a las víctimas en todos los ámbitos donde se relacionen, como el hogar, el trabajo o la vía pública. Pero hay falsas denuncias de mujeres que son mentirosas e inventan cosas; los hombres no cometen ningún delito.  </td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                    </tr>
+                      <tr>
+                        <td class="ley-name"> va ser eliminado la Ley 26.743 Ley de Identidad de Género.  </td>
+                        <td class="ley-description"> reconoce que cada persona tiene derecho a ser identificada y respetada según cómo se siente y se percibe a sí misma, sin importar el sexo que le asignaron al nacer. La ley permite cambiar el nombre y el sexo en los documentos oficiales. Además, asegura que todas las personas sean respetadas en la escuela, el trabajo y los servicios públicos, protegiendo su privacidad y dignidad. Esta ley convirtió a Argentina en un país pionero en reconocer legalmente la identidad de género de manera justa y libre. </td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                    </tr>
+
+
+ <tr>
+              
+<td class="ley-name"> va ser eliminado la  Ley de Identidad de Género, </td>
+                        <td class="ley-description"> reconoce que cada persona tiene derecho a ser identificada y respetada según cómo se siente y se percibe a sí misma, sin importar el sexo que le asignaron al nacer. La ley permite cambiar el nombre y el sexo en los documentos oficiales. Además, asegura que todas las personas sean respetadas en la escuela, el trabajo y los servicios públicos, protegiendo su privacidad y dignidad. Esta ley convirtió a Argentina en un país pionero en reconocer legalmente la identidad de género de manera justa y libre.</td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                            
+          </tr>
+
+        <tr>
+              <td class="ley-name">va ser eliminado la   Ley de Educación Sexual Integral (ESI). </td>
+                        <td class="ley-description">tiene como objetivo que los estudiantes comprendan distintos aspectos de la sexualidad de manera completa y responsable. Incluye la salud física y emocional, los derechos humanos y la afectividad, la igualdad de género y la prevención de la violencia, así como la sexualidad responsable y la prevención de enfermedades de transmisión sexual (ETS). Esta educación es obligatoria, por lo que todas las instituciones educativas deben incluirla en sus planes de estudio. Además, es participativa, lo que significa que los contenidos deben adaptarse a la edad de los estudiantes y fomentar un ambiente respetuoso, inclusivo y libre de discriminación. La ley también establece que los docentes deben recibir la formación necesaria para enseñar estos temas de manera adecuada y clara. Por último, busca que los estudiantes conozcan sus derechos sexuales y reproductivos, aprendan a relacionarse de manera igualitaria y prevengan situaciones de abuso o discriminación. En resumen, la ESI es una herramienta legal para que todos los estudiantes en Argentina reciban información confiable sobre sexualidad, afectividad y relaciones humanas, ayudándolos a tomar decisiones responsables y respetuosas. </td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                                     
+      
+        </tr>       
+
+<tr>
+                 
+   <td class="ley-name"> va ser eliminado la Ley 27.452 Ley Brisa. Reparación económica para hijos e hijas de víctimas de violencia de género o intrafamiliar. </td>
+                        <td class="ley-description">ayuda a los hijos e hijas de personas que murieron por violencia de género o violencia familiar. Lo que hace es darles dinero cada mes y asegurarse de que tengan atención médica, para que puedan vivir y crecer sin pasar necesidades. Este beneficio es para niños y adolescentes menores de 21 años, y también para personas con discapacidad sin límite de edad. Se solicita en ANSES, y se mantiene aunque el hecho haya pasado antes de que la ley existiera. La idea principal de la ley es cuidar y proteger a los hijos de víctimas de violencia, dándoles apoyo económico y acceso a servicios esenciales mientras crecen. </td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+      
+</tr>                              
+   <tr>
+          <td class="ley-name">va ser eliminado  la  Ley 26.791agravando los homicidios o femicidio  </td>
+                        <td class="ley-description"> establece que un homicidio cometido por odio de género se considera un femicidio y es un delito muy grave, castigado con prisión perpetua.
+                           matar a alguien por violencia de género es un crimen especialmente grave y no tener excusas.  </td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                    
+   </tr>
+<tr>
+                      
+        <td class="ley-name"> va ser eliminado la  Ley 26.485 Anexo XXXVI Prevención en tecnología. </td>
+                        <td class="ley-description">protege a las mujeres contra todo tipo de violencia, y su Anexo XXXVI se centra en la violencia que ocurre a través de la tecnología e internet. Esto incluye situaciones como el acoso por redes sociales o mensajes, la difusión de fotos o videos íntimos sin consentimiento y el control de alguien mediante dispositivos electrónicos. Este anexo reconoce que estas conductas son violencia de género, brindando protección específica a las mujeres frente a agresiones en el ámbito digital. </td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                   
+
+</tr>
+
+<tr>
+                      
+        <td class="ley-name"> va ser eliminado la  Prevención en Violencia Digital </td>
+                        <td class="ley-description"> reconoce la violencia digital como una modalidad específica de violencia de género. Define la violencia digital como cualquier conducta que utilice las tecnologías de la información y la comunicación para causar daño a las mujeres, incluyendo la difusión no consentida de material íntimo, acoso en línea, suplantación de identidad y discursos de odio misóginos. Se establecen medidas para prevenir, sancionar y erradicar estas formas de violencia, así como para proteger los derechos digitales de las mujeres.</td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                   
+
+</tr>
+
+<tr>
+                  
+        <td class="ley-name">va ser eliminado la Ley de Protección de Datos Personales (Ley 25.326) </td>
+                        <td class="ley-description"> Esta ley tiene como objetivo proteger la privacidad de las personas y regular el tratamiento de sus datos personales. Reconoce el derecho de toda persona a que su información sea privada y establece qué se considera dato personal o sensible. Obliga a empresas y organizaciones a garantizar la seguridad y confidencialidad de la información, registrar sus bases de datos ante la autoridad de control y cumplir con medidas de protección. Los artículos principales incluyen: el derecho a la privacidad (Artículo 1), la definición de datos personales y tratamiento de datos (Artículo 4), la obligación de registrar bases de datos (Artículo 14) y la responsabilidad sobre la seguridad de la información (Artículo 16). </td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+</tr>
+<tr>
+                     
+        <td class="ley-name"> va ser eliminado la Ley de Delitos Informáticos (Ley 26.388) </td>
+                        <td class="ley-description"> Protege a personas y organizaciones frente a ataques y fraudes digitales. Entre los artículos más importantes se encuentran: el acceso no autorizado a sistemas informáticos (Artículo 1), el fraude y manipulación de datos digitales (Artículo 2) y la difusión de virus, malware o contenido dañino (Artículo 3). Su finalidad es brindar seguridad legal en el entorno digital y penalizar conductas ilícitas en línea.</td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                   
+ 
+</tr>
+<tr>
+                      
+        <td class="ley-name">va ser eliminado  la Ley de Comercio Electrónico </td>
+                        <td class="ley-description">La ley regula las transacciones comerciales realizadas por medios electrónicos, reconociendo la validez legal de contratos y firmas digitales. Establece obligaciones a los proveedores de servicios online, como brindar información clara sobre productos, precios y condiciones de venta, y regula procedimientos de reclamos y devoluciones para proteger al consumidor. Entre sus artículos más relevantes se encuentran: validez de contratos electrónicos (Artículo 1), obligaciones de los proveedores (Artículo 5) y procedimientos de reclamos y devoluciones (Artículo 10). </td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                   
+
+</tr>
+<tr>
+                      
+        <td class="ley-name"> va ser eliminado la Ley de Firma Digital (Ley 25.506) </td>
+                        <td class="ley-description">Esta ley otorga validez legal a los documentos y firmas digitales, equiparándolos a los manuscritos. Define los certificados digitales y regula a las autoridades certificantes, estableciendo responsabilidades legales sobre su uso. Entre los artículos más importantes se incluyen: reconocimiento de la firma digital como válida (Artículo 1), definición de certificados digitales y autoridades certificantes (Artículo 5) y responsabilidades legales sobre su utilización (Artículo 8). Permite realizar trámites, contratos y gestiones online de manera segura y con respaldo jurídico. </td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                    
+</tr>
+<tr>
+                      
+        <td class="ley-name"> va ser eliminado la ley Suplantación de identidad </td>
+                        <td class="ley-description">La suplantación de identidad está regulada en el Código Penal Argentino, artículo 153 bis. Este delito ocurre cuando una persona se hace pasar por otra, utilizando cualquier medio, incluyendo redes sociales, correos electrónicos o perfiles digitales, con el fin de cometer un ilícito o causar daño. La ley establece penas de 1 a 5 años de prisión, buscando proteger la reputación, la integridad y los derechos de las personas frente a engaños y fraudes digitales. </td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                   </tr>
+
+<tr>
+                      
+        <td class="ley-name"> va ser eliminado la ley Delitos informáticos </td>
+                        <td class="ley-description"> Los delitos informáticos comprenden conductas delictivas cometidas mediante sistemas digitales, como el acceso no autorizado a computadoras o redes, la destrucción de datos y la instalación de software malicioso. Estas normas buscan garantizar la seguridad de los sistemas informáticos y proteger tanto a usuarios individuales como a empresas de los ataques cibernéticos.
+                            y robo de la base de datos que crearon la web legal o software por los pogramadores
+                        </td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+</tr>
+<tr>
+                      
+        <td class="ley-name">va ser eliminado la ley Fraude electrónico </td>
+                        <td class="ley-description"> regulado por la Ley 26.388, artículo 153 ter, se refiere al uso indebido de medios digitales para obtener dinero, bienes o información de manera ilegal. Esto incluye el robo de datos bancarios, tarjetas de crédito o transacciones en línea sin autorización. Las penas varían según la gravedad del daño, pudiendo alcanzar hasta 6 años de prisión, asegurando así la confianza en las operaciones digitales.</td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                   
+
+</tr>
+
+<tr>
+                      
+        <td class="ley-name">va ser eliminado la ley Sexting   </td>
+                        <td class="ley-description"> consiste en el envío o intercambio de imágenes, videos o mensajes de contenido sexual a través de medios digitales, como celulares o redes sociales. Cuando estas imágenes son difundidas
+                          con el consentimiento de la persona, se considera un delito. La sanción puede incluir prisión y multas, según la gravedad del daño causado. Esta normativa protege la dignidad, la intimidad y la integridad psicológica de las víctimas, asegurando que su privacidad sea respetada.  
+                        </td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+</tr>
+
+<tr>
+                      
+        <td class="ley-name"> va ser eliminado la ley Groaming </td>
+                        <td class="ley-description"> es el acoso sexual a menores de edad mediante internet, redes sociales, chats o correos electrónicos, con el objetivo de manipularlos o inducirlos a encuentros sexuales o producción de material sexual. Está regulado por la Ley 26.904, que establece penas de 6 meses a 4 años de prisión para quien realice estas conductas. La norma protege a los niños y adolescentes de la explotación y el abuso en entornos digitales, y busca responsabilizar tanto a los adultos como a las plataformas que faciliten estas interacciones peligrosas.</td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+</tr>
+
+<tr>
+                      
+        <td class="ley-name"> va ser eliminado la ley Pornovenganza </td>
+                        <td class="ley-description"> la difusión de material sexual privado, como fotos o videos, con el fin de humillar, chantajear o dañar a la víctima, usualmente tras el fin de una relación. En Argentina, está regulada por el Código Penal, que sanciona la publicación de imágenes íntimas sin consentimiento, así como la extorsión y amenazas asociadas. Las penas varían según la gravedad, pudiendo incluir prisión de 1 a 6 años. Esta ley protege la privacidad, la dignidad y la integridad emocional de las personas afectadas por estas acciones.</td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                   
+
+</tr>
+<tr>
+                      
+        <td class="ley-name"> va ser eliminado la  Ley espionaje ilegal </td>
+                        <td class="ley-description"> 
+                            consiste en acceder sin autorización a dispositivos electrónicos 
+                            como celulares, computadoras o redes  con el propósito de obtener información privada. 
+                            Esto abarca mensajes de aplicaciones como WhatsApp o Telegram, fotos, videos, documentos, archivos de texto y 
+                            correos electrónicos, así como cualquier contenido almacenado en discos duros, memorias o servicios en la nube. 
+                            También comprende la interceptación de la navegación en Internet y el acceso a información sensible contenida en documentos Word,
+                             PDF, presentaciones, fotografías o videos. Cuando esa información se difunde sin consentimiento, ya sea en sitios web o mediante 
+                             navegadores como Google Chrome o Microsoft Edge, se configura un delito que puede implicar varias violaciones legales: 
+                             la violación de la privacidad al acceder a datos personales sin autorización; la difusión de contenido íntimo, como en casos de sexting 
+                             o pornovenganza; y el robo de información, que incluye documentos, archivos profesionales y material confidencial. En algunos casos,
+                              personas con conocimientos técnicos
+Algunos programadores han espiado dispositivos y luego publicado el material obtenido en Internet, incluso a través de navegadores como Google Chrome o Microsoft Edge. Para realizar el espionaje, instalan sistemas operativos como Kali Linux. Estas acciones, llevadas a cabo por personas que estudian o ejercen la profesión de programación, 
+son ilegales y están penadas por la ley. Hacé clic ahí y te muestro los sitios web ilegales.
+               
+<a href="https://www.google.com/search?q=porno&oq=porno&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDEwMjRqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8&sei=N___aPGRBP2p5OUP-OH86Ac"><button>
+
+    Aquí muestro sitios web ilegales y sus cómplices: la policía, los jueces, las juezas y el poder judicial.
+</button></a>
+        </td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                
+</tr>
+<tr>
+                      
+        <td class="ley-name"> va ser eliminado la ley Protección Integral de los Derechos de Niñas, Niños y Adolescentes </td>
+                        <td class="ley-description"> establece que niñas, niños y adolescentes son personas con derechos propios, y que todas las decisiones que los afecten deben priorizar su bienestar y desarrollo integral. Reconoce que tienen derecho a ser escuchados y a participar según su edad que deben ser protegidos de cualquier forma de violencia, maltrato, explotación o discriminación. La ley obliga al Estado, a las familias y a la sociedad a garantizar estos derechos, creando un sistema de protección integral con organismos nacionales y provinciales, además de la Defensoría de los Derechos de Niñas, Niños y Adolescentes, que interviene cuando los derechos se vulneran. También asegura su acceso a la salud, educación, recreación, cultura y vida familiar, promoviendo medidas preventivas y apoyo integral para que puedan crecer de manera segura  </td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                   
+
+</tr>
+<tr>
+                    
+        <td class="ley-name"> bullying está regulado por la Ley Nacional 26.892(sera eliminado y no habla proteccion personales)</td>
+                        <td class="ley-description">es un tipo de acoso o maltrato que se produce de manera intencional, repetida y sistemática entre personas, generalmente en entornos escolares, aunque también puede ocurrir en el trabajo o en redes sociales. Puede ser físico (golpes, empujones), verbal (insultos, burlas, apodos ofensivos), psicológico (humillaciones, amenazas, exclusión) o cibernético (acoso mediante internet o redes sociales).
+El bullying afecta seriamente la salud emocional, social y académica de las víctimas, causando ansiedad, depresión, baja autoestima </td>
+                        <td><span class="ley-status eliminar">El presidente milei lo va a eliminar esta ley </span></td>
+                   
+  
+</tr>
+
+                </tbody>
+            </table>
+        </div>
+        
+       
+    </div>
+
+
+
+    
+                    
+
+         
+
+
+
+
+    <script>
+        // Agregar interactividad a la tabla
+        document.addEventListener('DOMContentLoaded', function() {
+            const rows = document.querySelectorAll('tbody tr');
+            
+            rows.forEach(row => {
+                row.addEventListener('click', function() {
+                    // Remover cualquier fila previamente seleccionada
+                    rows.forEach(r => r.classList.remove('selected'));
+                    
+                    // Agregar clase selected a la fila clickeada
+                    this.classList.add('selected');
+                    
+                    // Obtener información de la ley seleccionada
+                    const leyName = this.querySelector('.ley-name').textContent;
+                    const leyStatus = this.querySelector('.ley-status').textContent;
+                    
+                    // Mostrar alerta con información (podría reemplazarse por un modal más elegante)
+                    alert(`Ley: ${leyName}\nEstado propuesto: ${leyStatus}`);
+                });
+            });
+            
+            // Agregar animación a las tarjetas de estadísticas
+            const statCards = document.querySelectorAll('.stat-card');
+            
+            statCards.forEach((card, index) => {
+                // Añadir un pequeño retraso para el efecto escalonado
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100);
+                }, index * 100);
+            });
+        });
+        
+        // Estilo adicional para filas seleccionadas
+        const style = document.createElement('style');
+        style.textContent = `
+            tbody tr.selected {
+                background-color: #e6f0ff !important;
+                border-left: 4px solid #2a5298;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

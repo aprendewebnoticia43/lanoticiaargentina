@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebFedNoticiasArgentina - Javier Milei anuncia medidas económicas</title>
+  <style>
+    /* Reset y tipografía mejorada */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", "Arial", sans-serif;
+      background: linear-gradient(135deg, #e0e0e0, #e4edf5 100%);
+      color: #222;
+      line-height: 1.7;
+      min-height: 100vh;
+          border-radius: 10px;
+  max-width: 800px;
+  margin: 90px auto;
+    }
+
+    /* Cabecera estilo portal de noticias mejorada */
+    header {
+      background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+      color: white;
+      padding: 25px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+      background-size: cover;
+    }
+
+    header .logo {
+      font-size: 2.2em;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      position: relative;
+      z-index: 1;
+    }
+
+    header .fecha {
+      font-size: 1.1em;
+      color: #e0e0e0;
+      background: rgba(0,0,0,0.2);
+      padding: 8px 15px;
+      border-radius: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Contenedor principal mejorado */
+    .container {
+      max-width: 900px;
+      background-color: #fff;
+      margin: 40px auto;
+      padding: 45px 50px;
+      border-radius: 15px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 100%;
+      background: linear-gradient(to bottom, #1a73e8, #d32f2f);
+    }
+
+    /* Títulos y subtítulos mejorados */
+    h1 {
+      font-size: 2.3em;
+      color: #1a237e;
+      margin-bottom: 25px;
+      line-height: 1.3;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    h1::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(to right, #d32f2f, #1a73e8);
+      border-radius: 2px;
+    }
+
+    h2 {
+      font-size: 1.7em;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      padding: 12px 0;
+      border-bottom: 3px solid #1a73e8;
+      color: #1a237e;
+      position: relative;
+    }
+
+    h2::before {
+      content: "»";
+      margin-right: 10px;
+      color: #d32f2f;
+    }
+
+    /* Párrafos mejorados */
+    p {
+      font-size: 1.15em;
+      margin-bottom: 25px;
+      text-align: justify;
+      opacity: 1;
+      transform: none;
+      transition: all 0.3s ease;
+    }
+
+    p:hover {
+      background-color: #f9f9f9;
+      padding: 10px 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    /* Palabras destacadas mejoradas */
+    .highlight {
+      color: #d32f2f;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+
+    .highlight::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #d32f2f;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .highlight:hover {
+      color: #b71c1c;
+      background-color: #ffebee;
+    }
+
+    .highlight:hover::after {
+      transform: scaleX(1);
+    }
+
+    /* Bloques de datos importantes mejorados */
+    .dato {
+      background: linear-gradient(135deg, #ffe0e0 0%, #fff2f2 100%);
+      padding: 22px 25px;
+      margin: 30px 0;
+      border-left: 6px solid #d32f2f;
+      border-radius: 8px;
+      font-style: italic;
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      opacity: 1;
+      transform: none;
+      transition: all 0.3s ease;
+    }
+
+    .dato::before {
+      content: "⚠️";
+      position: absolute;
+      top: 15px;
+      left: -35px;
+      font-size: 1.5em;
+      background: white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .dato:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Footer mejorado */
+    footer {
+      text-align: center;
+      font-size: 0.95em;
+      color: #555;
+      margin-top: 50px;
+      padding: 30px;
+      border-top: 1px solid #ddd;
+      background: linear-gradient(to bottom, #f4f4f4, #e9e9e9);
+      position: relative;
+    }
+
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(to right, #1a73e8, #d32f2f);
+    }
+
+    /* Efectos de animación al hacer scroll */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive mejorado */
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 25px;
+        margin: 25px 15px;
+      }
+      
+      header {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      header .logo {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+      }
+      
+      h1 {
+        font-size: 1.8em;
+      }
+      
+      h2 {
+        font-size: 1.4em;
+      }
+      
+      .dato::before {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px 15px;
+      }
+      
+      h1 {
+        font-size: 1.5em;
+      }
+      
+      h2 {
+        font-size: 1.3em;
+      }
+      
+      p {
+        font-size: 1em;
+      }
+    }
+        a.redirect-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #007BFF;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        a.redirect-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">NoticiasArgentina</div>
+    <div class="fecha"> Actualizado 27 de octubre de 2025</div>
+  </header>
+
+  <div class="container">
+    <h3>Javier Milei anuncia medidas para recuperar la economía argentina</h3>
+
+    <p class="fade-in">El presidente <span class="highlight">Javier Milei</span> acusa a los gobiernos peronistas de corrupción y de haber dejado al país con alta inflación, pobreza estructural y un sistema económico paralizado. Por esta razón, planea eliminar ciertas leyes, asegurando que esto no es sacar al Estado, es castigar a la persona.</p>
+ <a class="redirect-button" href="cuadrocomparativoeliminaley.html">
+        Cuadro comparativo de lo que el presidente Milei quiere eliminar
+    </a>
+    <p class="fade-in">El presidente Milei afirma que estas medidas buscan recuperar la economía; reducir la inflación, estabilizar el dólar en los <span class="highlight">90 pesos</span> y mantener al Estado organizado y eficiente, lo que permitirá que los negocios funcionen dentro de un marco regulado.</p>
+
+    <div class="dato fade-in">
+      Javier Milei menciona que la falta de empleo se debe a leyes que deberían ser eliminadas. Además, sostiene que muchas denuncias hechas por mujeres son falsas, inventadas contra hombres inocentes.
+    </div>
+
+    <h3 class="fade-in">Impacto de las políticas peronistas</h3>
+    <p class="fade-in">Según Milei, las políticas implementadas por el peronismo han impedido el crecimiento económico, la inversión y la generación de empleo. Por ello, promete impulsar reformas que fomenten la libertad económica, la competencia y la responsabilidad individual.</p>
+
+    <h3 class="fade-in">Calendario de implementación</h3>
+    <p class="fade-in">El plan de Milei se llevará a cabo en 2025; si la situación no lo permite, se realizará en 2026, año en que se espera ganar las elecciones y consolidar las reformas propuestas.</p>
+<h3>
+    Estrategia de javier milei la eleciones 2026
+</h3>
+<p>
+La estrategia de Javier Milei en las elecciones es querer ganar y no perder. Si hay un empate, su plan para 2026 es unirse con los radicales, quienes lo ayudarán a derrotar al peronismo, ya sea para que Milei sea presidente o que otro candidato del espacio libertario lo logre.
+</p>
+<p>
+   Para que el peronismo gane, tendría que obtener un puntaje mayor, pero sin superar ni a los radicales ni a los libertarios. La verdad es que ya no sirve la experiencia de los viejos líderes como jorge capitanich o sergio masa y tiene que ser ahorra los jóvenes. Estos jóvenes deben ser capaces, conocer ciencia política, leyes, artículos y decretos, y estar preparados para gobernar como presidente, vicepresidente, gobernador o otros cargo como disputado y senadores. Esto no es un chiste ni una tontería: es la verdad inteligente sobre cómo debe actuar el peronismo si quiere realmente recuperar fuerza y legitimidad. 
+</p>
+
+</div>
+
+ 
+
+  <script>
+    // Animación al hacer scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    fadeElements.forEach(el => {
+      observer.observe(el);
+    });
+
+    // Cambio de color interactivo en palabras destacadas
+    const highlights = document.querySelectorAll('.highlight');
+    highlights.forEach(el => {
+      el.addEventListener('click', () => {
+        const colores = ['#d32f2f','#ff5722','#e91e63','#4caf50','#2196f3','#f57c00'];
+        const random = colores[Math.floor(Math.random() * colores.length)];
+        el.style.color = random;
+        el.style.backgroundColor = `${random}15`;
+      });
+    });
+  </script>
+
+</body>
+</html>
